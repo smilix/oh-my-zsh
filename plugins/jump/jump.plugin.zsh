@@ -41,7 +41,7 @@ _completemarks() {
 	if [[ $(ls "${MARKPATH}" | wc -l) -gt 1 ]]; then
 		reply=($(ls $MARKPATH/**/*(-) | grep : | sed -E 's/(.*)\/([_\da-zA-Z\-]*):$/\2/g'))
 	else
-		if readlink -e "${MARKPATH}"/* &>/dev/null; then
+		if readlink "${MARKPATH}"/* &>/dev/null; then
 			reply=($(ls "${MARKPATH}"))
 		fi
 	fi
