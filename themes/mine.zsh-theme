@@ -2,7 +2,7 @@
 # based on the AVIT ZSH Theme
 
 PROMPT='
-$(_user_host)${_current_dir} $(git_prompt_info)
+$(_user_host)$(_current_dir) $(git_prompt_info)
 %{$fg[$CARETCOLOR]%}▶%{$reset_color%} '
 
 PROMPT2='%{$fg[$CARETCOLOR]%}◀%{$reset_color%} '
